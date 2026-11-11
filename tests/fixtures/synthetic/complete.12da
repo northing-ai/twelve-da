@@ -1,0 +1,10 @@
+// Entirely invented geometry and attributes.
+model { name Example attributes { integer Count 2 real Count2 0x1.4p+1 text Label "a\\b\"c" group { name Details attributes { text Code X } } } }
+colour blue style dashed null -123
+string super { name "" closed false data_3d { 0 0 -123 2 0 3 } radius_data { 2 } major_data { f } point_data { a b } }
+string super { name "" data_2d { 0 0 } }
+model Second
+string 2d { name Line z 12 data { 0 0 1 1 } }
+string 3d { name Line data { 0 0 1 1 1 2 } }
+tin { name Surface points { 0 0 0 0 1 1 1 0 2 } triangles { 1 2 3 } }
+full_tin { name Full points { 0 0 0 0 1 0 1 1 0 1 0 0 } triangles { 1 2 3 1 3 4 } neighbours { 0 0 2 1 0 0 } nulling { 1 2 } }

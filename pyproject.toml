@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "twelve-da"
+version = "0.4.0rc1"
+description = "Read-only 12d Archive reader with explicit partial coverage and diagnostics"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+twelve-da = "twelve_da.cli:main"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["twelve_da"]
